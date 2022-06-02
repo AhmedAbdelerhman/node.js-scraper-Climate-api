@@ -21,9 +21,9 @@ get climate news from famous online newspaper
 #### Get one newspaper news
 
 ```http
-  ![#c5f015] fetch("https://climate-web-scraper.herokuapp.com/api/news/{id}")
+  ![#c5f015](fetch("https://climate-web-scraper.herokuapp.com/api/news/{id}")
   .then((res) => res.json())
-  .then((json) => console.log(json));
+  .then((json) => console.log(json));)
 ```
 
 | Parameter | value     | Description                       |
