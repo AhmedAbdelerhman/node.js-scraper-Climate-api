@@ -12,18 +12,28 @@ get climate news from famous online newspaper
 #### Get all data
 
 ```diff
-  fetch("https://climate-web-scraper.herokuapp.com/api/news")
-  .then((res) => res.json())
-  .then((json) => console.log(json));
+  axios
+  .get("https://climate-web-scraper.herokuapp.com/api/news")
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 
 #### Get one newspaper news
 
 ```diff
-   fetch("https://climate-web-scraper.herokuapp.com/api/news/{id}")
-  .then((res) => res.json())
-  .then((json) => console.log(json));
+  axios
+  .get(`https://climate-web-scraper.herokuapp.com/api/news/${id}`)
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 | Parameter | value     | Description                       |
@@ -36,8 +46,13 @@ get climate news from famous online newspaper
 #### Example
 
 ```diff
-  fetch("https://climate-web-scraper.herokuapp.com/api/news/guardian")
-  .then((res) => res.json())
-  .then((json) => console.log(json));
+  axios
+  .get("https://climate-web-scraper.herokuapp.com/api/news/guardian")
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
