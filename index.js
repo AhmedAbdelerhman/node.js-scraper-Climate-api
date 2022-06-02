@@ -2,10 +2,13 @@ const express = require("express");
 const cheerio = require("cheerio");
 const axios = require("axios");
 const cors = require("cors")
+const helmet = require('helmet')
 const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(cors())
+app.use(helmet())
+
 const articles = [];
 
 const newspapers = [
